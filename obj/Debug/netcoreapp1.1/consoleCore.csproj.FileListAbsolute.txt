@@ -1,0 +1,9 @@
+F:\Utilities\Download\consoleCore\bin\Debug\netcoreapp1.1\consoleCore.deps.json
+F:\Utilities\Download\consoleCore\bin\Debug\netcoreapp1.1\consoleCore.runtimeconfig.json
+F:\Utilities\Download\consoleCore\bin\Debug\netcoreapp1.1\consoleCore.runtimeconfig.dev.json
+F:\Utilities\Download\consoleCore\bin\Debug\netcoreapp1.1\consoleCore.dll
+F:\Utilities\Download\consoleCore\bin\Debug\netcoreapp1.1\consoleCore.pdb
+F:\Utilities\Download\consoleCore\obj\Debug\netcoreapp1.1\consoleCore.csprojResolveAssemblyReference.cache
+F:\Utilities\Download\consoleCore\obj\Debug\netcoreapp1.1\consoleCore.AssemblyInfo.cs
+F:\Utilities\Download\consoleCore\obj\Debug\netcoreapp1.1\consoleCore.dll
+F:\Utilities\Download\consoleCore\obj\Debug\netcoreapp1.1\consoleCore.pdb
