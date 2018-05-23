@@ -27,15 +27,13 @@ namespace consoleCore
            alist.Add(new Transaction(11,190457,0.2933));
            alist.Add(new Transaction(12,40572,0.0686));
 
-           Console.WriteLine(alist);
-
            var SortedList = (from l in alist
                         orderby l.Size descending
                         select l).ToList();
                SortedList.ForEach((x)=>{
                var hashedCode = x.GetHashCode();
-               Console.WriteLine(String.Format("hashedCode:{0},Size:{1}",hashedCode,x.Size));
-                    if(blockSize + x.Size <=1000000){
+              
+                    if(blockSize + x.Size <=MAXBLOCKSIZE){
                     block.Add(hashedCode,new Transaction(x.Id,x.Size,x.Fee));
                     blockSize += x.Size;
                     totalFee += x.Fee;
