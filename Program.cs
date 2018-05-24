@@ -26,7 +26,7 @@ namespace consoleCore
            alist.Add(new Transaction(11,190457,0.2933));
            alist.Add(new Transaction(12,40572,0.0686));
 
-          Blockchain bc = new Blockchain(1001);
+          Blockchain bc = new Blockchain(1001,1000000,12.5);
           alist.ForEach((x)=>{
               bc.addUnhandleBlock(x.Id,x.Size,x.Fee);
           });
