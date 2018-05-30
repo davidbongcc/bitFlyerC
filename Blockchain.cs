@@ -27,13 +27,14 @@ class Blockchain{
     */
     public Tuple<int,double> mineBlock(){
          int blockSize =0;
-          double totalFee=0.0;
+        double totalFee=0.0;
+        var space=0;
+        var totalSize=0;
      IList<Transaction> selectedTransaction = new List<Transaction>();
            var SortedList = (from l in Open_transaction
                         orderby l.Size descending
                         select l).ToList();
-            var space=0;
-            var totalSize=0;
+         
             for(int i=0; i < SortedList.Count;i++){
             if(SortedList.Count < 0)
                 break;
@@ -44,9 +45,9 @@ class Blockchain{
                 if(SortedList[i].Size <= space)
                 {
                     totalSize +=SortedList[i].Size;
-                }else
-                {
-                    //break;
+                    totalFee += SortedList[i].Fee;
+                    
+
                 }
 
 
@@ -62,6 +63,6 @@ class Blockchain{
             });
                  
         
-        return Tuple.Create(blockSize,totalFee);
+        return Tuple.Create(totalSize,totalFee);
     }
 }
