@@ -32,19 +32,24 @@ class Blockchain{
            var SortedList = (from l in Open_transaction
                         orderby l.Size descending
                         select l).ToList();
-            
+            var space=0;
+            var totalSize=0;
             for(int i=0; i < SortedList.Count;i++){
             if(SortedList.Count < 0)
                 break;
-                  if(blockSize + SortedList[i].Size <=MaxBlockSize){
-                     blockSize += SortedList[i].Size;
-                     totalFee += SortedList[i].Fee;
-                     selectedTransaction.Add(SortedList[i]);
-                     SortedList.RemoveAt(i);
-                     i--;
-                    }else{
-                        break;
-                    }
+                
+           
+                space  = MaxBlockSize -totalSize; 
+
+                if(SortedList[i].Size <= space)
+                {
+                    totalSize +=SortedList[i].Size;
+                }else
+                {
+                    //break;
+                }
+
+
             }
             totalFee +=  Bonus;
             var dummyHashed = new Random();
